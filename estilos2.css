@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
   background: #FFF;
@@ -12,11 +16,14 @@ header{
    color: #fff;
    padding: 15px 0 15px 0;
 }
-
 p{
 	font-family: sans-serif;
 	font-weight: 400;
-	font-size:; 
+	font-size: 
+}
+ 
+.card-body {
+	padding: 0.5rem;
 }
 
 .navbar-brand{
@@ -25,7 +32,7 @@ p{
 }
 
 .card-body {
-  padding:5%;
+  padding:15px;
   text-align:left;
 }
 
@@ -42,14 +49,12 @@ p{
 
 .card-img-top {
   width: 100%;
-  height: 100%;
+  height: 70%;
   border-top-left-radius:2px;
   border-top-right-radius:2px;
   display:block;
-  overflow: hidden;
+    overflow: hidden;
 }
-
-
 
 .card {
   display: block; 
@@ -61,6 +66,24 @@ p{
     transition: box-shadow .25s; 
 }
 
-.card:hover {
+.card:hover{
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-columns {
+    column-count: 2;
+  }
 }
